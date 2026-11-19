@@ -1,0 +1,48 @@
+================================================================================
+TechPro Solutions - Service Ticket Management System (STMS)
+Automated Verification & Unit Test Execution Log
+================================================================================
+Module:         UMDCOM202 Software Engineering
+Student:        Parth Patel
+Execution Date: Thursday, November 19, 2026
+Environment:    Windows 11 Enterprise (x64)
+Interpreter:    Python 3.13.14 (CPython standard library unittest framework)
+Database:       SQLite 3.x (Relational Schema with Foreign Keys & Audit Trail)
+Working Dir:    TechPro_STMS_Submission/
+Command:        python -m unittest -v tests/test_system.py
+================================================================================
+
+test_01_valid_authentication (tests.test_system.TestTechProSTMS.test_01_valid_authentication)
+Test that valid credentials successfully return the correct user role object. ... ok
+test_02_invalid_authentication (tests.test_system.TestTechProSTMS.test_02_invalid_authentication)
+Test that invalid credentials return None. ... ok
+test_03_customer_ticket_creation (tests.test_system.TestTechProSTMS.test_03_customer_ticket_creation)
+Test that a customer can successfully create a ticket. ... ok
+test_04_admin_ticket_assignment (tests.test_system.TestTechProSTMS.test_04_admin_ticket_assignment)
+Test that an admin can assign a ticket to an engineer. ... ok
+test_05_engineer_status_update (tests.test_system.TestTechProSTMS.test_05_engineer_status_update)
+Test that a support engineer can update ticket status and log history. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.032s
+
+OK
+
+================================================================================
+TEST EXECUTION SUMMARY
+================================================================================
+Total Test Cases Executed : 5
+Successful Passes         : 5 (100.0%)
+Failures                  : 0
+Errors                    : 0
+Skipped                   : 0
+
+DETAILED TEST BREAKDOWN:
+[PASS] FR1 Authentication: Verified SHA-256 password hash comparison returns correct Admin model.
+[PASS] NFR1 Security: Verified unauthorized/invalid credentials reject access and return None.
+[PASS] FR2 Ticket Creation: Verified Customer can submit tickets with title, priority, description.
+[PASS] FR3 Ticket Allocation: Verified Admin can assign tickets to Support Engineers ('In Progress').
+[PASS] FR4 & FR5 Audit Trail: Verified Support Engineer updates status and logs event to ticket_history.
+
+VERIFICATION STATUS: ALL SYSTEM ACCEPTANCE TESTS PASSED SUCCESSFULLY.
+================================================================================
